@@ -5,42 +5,42 @@
 class GoReleaserTesting < Formula
   desc "Testing out uploading a brew forumla to a public tap"
   homepage "https://twitter.com/YrrepNoj"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Darwin_x86_64"
-      sha256 "4bd69c9a7bcab0fa05ea8b4c19300443f29be25e188ccbd551fba42ed0075b29"
+    if Hardware::CPU.arm?
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.5/go-releaser-testing_0.0.5_Darwin_arm64"
+      sha256 "08b6765b2e3d94bb81b10dcd9caa42f73eec3b4be34be83234fe1a38c7d15a69"
 
       def install
-        bin.install "go-releaser-testing_0.0.4_Darwin_x86_64" => "go-releaser-testing"
+        bin.install "go-releaser-testing_0.0.5_Darwin_arm64" => "go-releaser-testing"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Darwin_arm64"
-      sha256 "09b6f0e728cec07f30034afd8422c7404792a43b161afb5d6a7a1e32cb651336"
+    if Hardware::CPU.intel?
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.5/go-releaser-testing_0.0.5_Darwin_x86_64"
+      sha256 "bdea174829aaf74c5852a0073cebbfe47a4754d42c6e0b352117c2c3d7904201"
 
       def install
-        bin.install "go-releaser-testing_0.0.4_Darwin_arm64" => "go-releaser-testing"
+        bin.install "go-releaser-testing_0.0.5_Darwin_x86_64" => "go-releaser-testing"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Linux_arm64"
-      sha256 "f08c9b766b0d7dbb5d46a043e39d379f0fbb8f08f39e3a65cf5de047806b1ed1"
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.5/go-releaser-testing_0.0.5_Linux_arm64"
+      sha256 "e9699280337c5ea10523ae7e266865df6b157aa7a856265c9c48182821702590"
 
       def install
-        bin.install "go-releaser-testing_0.0.4_Linux_arm64" => "go-releaser-testing"
+        bin.install "go-releaser-testing_0.0.5_Linux_arm64" => "go-releaser-testing"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Linux_x86_64"
-      sha256 "2ac34de50acb2be0cbcdfc28c2a57114c5f84637ec50661809426cb2ec53337a"
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.5/go-releaser-testing_0.0.5_Linux_x86_64"
+      sha256 "35a349c719ebc8f4338686a8e01c349d3b64b0d033559f7f7aa72b854557c789"
 
       def install
-        bin.install "go-releaser-testing_0.0.4_Linux_x86_64" => "go-releaser-testing"
+        bin.install "go-releaser-testing_0.0.5_Linux_x86_64" => "go-releaser-testing"
       end
     end
   end
