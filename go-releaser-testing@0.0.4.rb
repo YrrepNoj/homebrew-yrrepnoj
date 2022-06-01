@@ -17,11 +17,11 @@ class GoReleaserTestingAT004 < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.5-next_Darwin_x86_64"
-      sha256 "aa6fb18e9128edbbe192c7deb53203730535216204a2b2216af32a95e1cba3b5"
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Darwin_x86_64"
+      sha256 "4bd69c9a7bcab0fa05ea8b4c19300443f29be25e188ccbd551fba42ed0075b29"
 
       def install
-        bin.install "go-releaser-testing_0.0.5-next_Darwin_x86_64" => "go-releaser-testing"
+        bin.install "go-releaser-testing_0.0.4_Darwin_x86_64" => "go-releaser-testing"
       end
     end
   end
