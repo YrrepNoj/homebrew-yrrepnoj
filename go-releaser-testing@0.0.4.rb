@@ -9,8 +9,8 @@ class GoReleaserTestingAT004 < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.5-next_Darwin_arm64"
-      sha256 "e40250d9495a31fe14dbda8bab499149f9d2ea75a97238a9d1fa8ea855d39c25"
+      url "https://github.com/YrrepNoj/go-releaser-testing/releases/download/v0.0.4/go-releaser-testing_0.0.4_Darwin_arm64"
+      sha256 "09b6f0e728cec07f30034afd8422c7404792a43b161afb5d6a7a1e32cb651336"
 
       def install
         bin.install "go-releaser-testing_0.0.5-next_Darwin_arm64" => "go-releaser-testing"
