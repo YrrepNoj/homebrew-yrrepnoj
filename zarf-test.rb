@@ -6,6 +6,16 @@ class ZarfTest < Formula
   homepage "https://zarf.dev/"
   version "0.19.1"
 
+  resource "init_package_amd" do
+    url "https://github.com/defenseunicorns/zarf/releases/download/v0.19.1/zarf-init-amd64.tar.zst"
+    sha256 "811fbde384b6ae4290b22cb8930cfc596a6d60050f397f9e67e8634aed5b24d3"
+  end
+
+  resource "init_package_arm" do
+    url "https://github.com/defenseunicorns/zarf/releases/download/v0.19.1/zarf-init-arm64.tar.zst"
+    sha256 "76d23d3caf7110133f603c2a192c662baae98c6c1d22431d86e45cadb7b6ee5d"
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/defenseunicorns/zarf/releases/download/v0.19.1/zarf-mac-apple"
@@ -35,13 +45,6 @@ class ZarfTest < Formula
       def install
         bin.install "zarf"
       end
-    end
-  end
-
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/defenseunicorns/zarf/releases/download/v0.19.1/zarf-init-amd64.tar.zst"
-      sha256 "811fbde384b6ae4290b22cb8930cfc596a6d60050f397f9e67e8634aed5b24d3"
     end
   end
 end
