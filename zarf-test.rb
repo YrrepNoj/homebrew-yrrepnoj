@@ -22,6 +22,8 @@ class ZarfTest < Formula
       def install
         bin.install "zarf-mac-intel" => "zarf"
       end
+
+
     end
   end
 
@@ -33,6 +35,13 @@ class ZarfTest < Formula
       def install
         bin.install "zarf"
       end
+    end
+  end
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/defenseunicorns/zarf/releases/download/v0.19.1/zarf-init-amd64.tar.zst"
+      sha256 "811fbde384b6ae4290b22cb8930cfc596a6d60050f397f9e67e8634aed5b24d3"
     end
   end
 end
